@@ -252,3 +252,28 @@ button:hover {
         max-height: none;
     }
 }
+
+#startBehaviorBtn:hover {
+    background: #e6b94d;
+    transform: scale(1.04);
+}
+
+@media (max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    h1{
+        font-size:28px;
+        text-align:center;
+    }
+
+    button{
+        width:100%;
+        margin-bottom:10px;
+        padding:14px;
+        font-size:16px;
+    }
+
+}
