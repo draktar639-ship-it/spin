@@ -1948,6 +1948,8 @@ switch (alignment) {
     localStorage.removeItem("characterAbilities");
     currentAbilities = [];
 
+    console.log(localStorage.getItem("characterAbilities"));
+
     const abilityEl = document.getElementById("characterAbility");
 
     if (abilityEl) {
