@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ability Generator</title>
+    <link rel="stylesheet" href="Ability.css">
+</head>
+
+<body>
+
+    <h1>Ability Generator</h1>
+
+    <a href="Wheel.html" class="back-link">
+        ← Back to Character Generator
+    </a>
+
+    <div class="main-layout">
+        
+        <!-- LEFT SIDE: Compact Rarity Board -->
+        <aside class="rarity-sidebar">
+            <h2>Drop Rates</h2>
+            
+            <div class="rarity common">
+                <h3>Common <span class="percent">(40%)</span></h3>
+                <p>Enhanced Senses, Animal Communication</p>
+            </div>
+
+            <div class="rarity uncommon">
+                <h3>Uncommon <span class="percent">(30%)</span></h3>
+                <p>Super Strength, Superspeed, Invulnerability, Flight, Invisibility, Telepathy, Telekinesis, Empathy, Chlorokinesis</p>
+            </div>
+
+            <div class="rarity rare">
+                <h3>Rare <span class="percent">(18%)</span></h3>
+                <p>Regeneration, Shapeshifting, Intangibility, Precognition, Clairvoyance, Illusion Casting, Pyrokinesis, Cryokinesis, Hydrokinesis, Aerokinesis, Geokinesis, Electrokinesis, Photokinesis, Umbrakinesis, Energy Projection, Force Field</p>
+            </div>
+
+            <div class="rarity epic">
+                <h3>Epic <span class="percent">(8%)</span></h3>
+                <p>Astral Projection, Mind Control, Biokinesis, Teleportation, Power Negation, Possession, Size Manipulation</p>
+            </div>
+
+            <div class="rarity legendary">
+                <h3>Legendary <span class="percent">(3%)</span></h3>
+                <p>Necromancy, Resurrection, Portal Creation, Dimensional Travel, Power Absorption</p>
+            </div>
+
+            <div class="rarity mythic">
+                <h3>Mythic <span class="percent">(1%)</span></h3>
+                <p>Immortality, Time Manipulation</p>
+            </div>
+        </aside>
+
+        <!-- RIGHT SIDE: Main Generator -->
+        <main class="generator-section">
+            <h2 id="abilityCount">
+                Ability Count: -
+            </h2>
+
+            <div id="abilityResults" class="results-box">
+                <!-- Results will appear here -->
+            </div>
+            <br>
+            <button id="rollAbilityBtn">
+                Roll Abilities
+            </button>
+            <p id="abilityRerollCount">Rerolls Remaining: 10</p>
+
+        </main>
+
+    </div>
+
+    <script src="Ability.js"></script>
+</body>
+</html>

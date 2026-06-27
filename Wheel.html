@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Generator Wheel V2</title>
+    <link rel="stylesheet" href="Wheel.css">
+</head>
+<body>
+
+    <h1>Character Generator Wheel V2</h1>
+    
+    <div id="profileSection">
+    <br>
+
+    <button id="behaviorAssessmentBtn">
+    Behavior Assessment
+    </button>
+
+    <h3 id="characterAlignment">
+    Alignment: Not Evaluated
+    </h3>
+
+    <hr>
+    <br>
+
+    <button id="generateAbilityBtn">
+    Roll Ability
+    </button>
+
+    <h3 id="characterAbility">
+    Ability: None
+    </h3>
+
+    <hr>
+    <h2>Character Profile</h2>
+    
+    <input
+        type="text"
+        id="characterName"
+        placeholder="Character Name">
+
+    <br>
+    <br>
+
+    <input
+        type="number"
+        id="characterAge"
+        placeholder="Age">
+
+    <br>
+    <br>
+    
+    <input
+        type="number"
+        id="characterHeight"
+        placeholder="Height (cm)">
+
+    <br>
+    <br>
+    <hr>
+    
+
+        <h3 id="characterOrigin">
+        Origin: Not Generated
+        </h3>
+
+        <button id="generateOriginBtn" onclick="generateOrigin()">
+            Roll Origin
+        </button>
+
+        <button id="lockOriginBtn">
+            Lock Origin
+        </button>
+
+        <p id="originRerollCount">
+            Rolls Remaining: 3
+        </p>
+
+        <h3 id="characterRace">
+        Race: Not Selected
+        </h3>
+        <button id="generateRaceBtn">
+            Roll Race
+        </button>
+
+        <button id="lockRaceBtn">
+            Lock Race
+        </button>
+
+        <p id="raceRerollCount">
+            Rolls Remaining: 3
+        </p>
+
+        <h3 id="characterOccupation">
+            Occupation: Not Selected
+        </h3>
+
+        <button id="generateOccupationBtn">
+            Roll Occupation
+        </button>
+
+        <button id="lockOccupationBtn">
+            Lock Occupation
+        </button>
+
+        <p id="occupationRerollCount">
+            Rolls Remaining: 3
+        </p>
+
+        <br>
+        <!-- THEN CONTINUE -->
+
+        <hr>
+
+        <h3 id="characterNarrative">
+        Narrative Function: Not Selected
+        </h3>
+
+        <button id="generateNarrativeBtn">
+        Roll Narrative Function
+        </button>
+
+        <button id="lockNarrativeBtn">
+        Lock Narrative Function
+        </button>
+
+        <p id="narrativeRerollCount">
+        Rolls Remaining: 3
+        </p>
+
+        <hr>
+
+        <h3 id="characterMoralRole">
+        Moral Role: Not Selected
+        </h3>
+
+        <button id="generateMoralBtn">
+        Roll Moral Role
+        </button>
+
+        <button id="lockMoralBtn">
+        Lock Moral Role
+        </button>
+
+        <p id="moralRerollCount">
+        Rolls Remaining: 3
+        </p>
+
+        <hr>
+
+    </div>
+
+    <div class="wheel-container">
+
+        <div class="pointer"></div>
+
+        <canvas id="wheel" width="500" height="500"></canvas>
+
+    </div>
+    
+    <h3>Select Attribute</h3>
+
+    <select id="attributeSelect">
+
+    <option value="Strength">
+        Strength
+    </option>
+
+    <option value="Stamina">
+        Stamina
+    </option>
+
+    <option value="Durability">
+        Durability
+    </option>
+
+    <option value="Endurance">
+        Endurance
+    </option>
+
+    <option value="Agility">
+        Agility
+    </option>
+
+    <option value="Intelligence">
+        Intelligence
+    </option>
+
+    <option value="Perception">
+        Perception
+    </option>
+
+    <option value="Mastery">
+        Mastery
+    </option>
+<br>
+</select>
+</p>
+<br>
+    <button id="spinBtn">Spin</button>
+    <button id="rerollBtn">
+     Reroll Selected Attribute
+    </button>
+    </select>
+    <p id="rerollCount">
+    Rerolls Remaining: 3
+    </p>
+
+    <h2 id="result">Result: None</h2>
+
+    <div id="rankInfo">
+
+    <h3>Rank Information</h3>
+
+    <p id="rankTitle">
+        Title: -
+    </p>
+
+    <p id="rankChance">
+        Chance: -
+    </p>
+
+    <p id="rankDescription">
+        Description: -
+    </p>
+
+    </div>
+
+    <h2>Character Attributes</h2>
+
+    <table id="characterTable">
+
+    <tr>
+        <th>Attribute</th>
+        <th>Rank</th>
+    </tr>
+
+    <tr>
+        <td>Strength</td>
+        <td id="strengthResult">-</td>
+    </tr>
+
+    <tr>
+        <td>Stamina</td>
+        <td id="staminaResult">-</td>
+    </tr>
+
+    <tr>
+        <td>Durability</td>
+        <td id="durabilityResult">-</td>
+    </tr>
+
+    <tr>
+        <td>Endurance</td>
+        <td id="enduranceResult">-</td>
+    </tr>
+
+    <tr>
+        <td>Agility</td>
+        <td id="agilityResult">-</td>
+    </tr>
+
+    <tr>
+        <td>Intelligence</td>
+        <td id="intelligenceResult">-</td>
+    </tr>
+
+    <tr>
+        <td>Perception</td>
+        <td id="perceptionResult">-</td>
+    </tr>
+    <tr>
+        <td>Mastery</td>
+        <td id="masteryResult">-</td>
+    </tr>
+
+</table>
+
+        <div class="summary-section">
+
+    <h2>Character Summary</h2>
+
+    <button id="generateSummaryBtn" class="action-btn">
+        Generate Summary
+    </button>
+
+    <button id="resetCharacterBtn" class="action-btn">
+        Reset Character
+    </button>
+
+    <pre id="characterSummary">
+        Roll all attributes first...
+    </pre>
+
+    </div>
+
+    </div>
+
+    <div id="powerScorePanel">
+
+    <h2>Character Evaluation</h2>
+
+    <p id="powerScore">
+        Power Score: -
+    </p>
+
+    <p id="powerRating">
+        Threat Level: -
+    </p>
+
+    <p id="powerClass">
+        Class: -
+    </p>
+
+    <p id="behaviorAssessment">
+        Behavior Assessment: -
+    </p>
+
+    </div>
+
+    <div class="history-container">
+
+    <h2>History</h2>
+
+    <button id="generateOriginBtn">
+        Clear History
+    </button>
+
+    <ul id="historyList"></ul>
+
+    </div>
+    <script src="Wheel.js"></script>
+
+</body>
+</html>
+

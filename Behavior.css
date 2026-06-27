@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    background: #121212;
+    color: gold;
+    font-family: Georgia, serif;
+    text-align: center;
+    
+    /* These 3 lines center the box perfectly in the middle of the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh; /* Ensures the body fills the full screen height */
+}
+
+#behaviorAssessment {
+    width: 500px;
+    /* Margin 0 allows Flexbox to center it, but we can add padding if needed */
+    padding: 20px;
+    background: #1b1b1b;
+    border: 2px solid gold;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    box-sizing: border-box;
+}
+
+#behaviorAssessment h2 {
+    color: gold;
+    margin: 0 0 15px 0; /* Top margin 0, bottom 15px */
+}
+
+#behaviorProgress {
+    color: #d8d8d8;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#behaviorQuestion {
+    color: white;
+    font-size: 22px;
+    line-height: 1.7;
+    min-height: 90px;
+    margin-bottom: 20px;
+}
+
+#behaviorChoices {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#behaviorChoices button {
+    background: #c89b3c;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background .2s ease, transform .2s ease;
+}
+
+#behaviorChoices button:hover {
+    background: #e6b94d;
+    transform: scale(1.03);
+}
+
+#startBehaviorBtn {
+    margin-top: 15px;
+    width: 100%;
+    background: #c89b3c;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .2s;
+}
+
+#startBehaviorBtn:hover {
+    background: #e6b94d;
+    transform: scale(1.04);
+}

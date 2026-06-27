@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavior</title>
+
+    <link rel="stylesheet" href="Behavior.css">
+        
+</head>
+
+<body>
+
+<div id="behaviorAssessment">
+
+    <h2>Behavior Assessment</h2>
+
+    <p id="behaviorProgress">
+        Question 1 / 30
+    </p>
+
+    <h3 id="behaviorQuestion">
+        Press Start Assessment
+    </h3>
+
+    <div id="behaviorChoices"></div>
+
+    <button id="startBehaviorBtn">
+        Start Assessment
+    </button>
+
+    <!-- Hidden until the assessment is finished -->
+    <div id="behaviorResult" style="display:none;">
+
+        <h2>Assessment Complete</h2>
+
+        <p>Your behavior has been analyzed.</p>
+
+        <h1 id="finalAlignment"></h1>
+
+        <button id="returnBtn">
+            Return to Character Generator
+        </button>
+
+    </div>
+
+</div>
+
+<script src="Behavior.js"></script>
+
+</body>
+
+</html>

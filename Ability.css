@@ -1,0 +1,254 @@
+body {
+    background: #121212;
+    color: gold;
+    text-align: center;
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 5px; /* Tightened margin */
+    font-size: 2rem;
+}
+
+/* --- CENTERED BACK LINK (FIXED) --- */
+.back-link {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 auto 30px auto; /* Centered with auto margins */
+    display: block; /* Ensures it behaves as a block for centering */
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: gold;
+    text-decoration: underline;
+}
+
+/* Main Layout: Flexbox for Side-by-Side */
+.main-layout {
+    display: flex;
+    flex-direction: row; /* Side by side */
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* --- LEFT SIDE: Compact Sidebar --- */
+.rarity-sidebar {
+    flex: 0 0 260px; /* Fixed width, doesn't grow or shrink much */
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    height: fit-content;
+    max-height: 80vh; /* Prevents it from getting too tall */
+    overflow-y: auto; /* Scroll if list is too long */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.rarity-sidebar h2 {
+    text-align: center;
+    color: gold;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+}
+
+/* --- RIGHT SIDE: Main Generator --- */
+.generator-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+#abilityCount {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* --- OUTER RESULT BOX (Grows with content) --- */
+.results-box {
+    width: 100%;
+    max-width: 500px;
+    
+    /* Dynamic Sizing */
+    min-height: 140px;      /* Minimum height for 1 ability */
+    max-height: 400px;      /* Max height before scrolling */
+    height: auto;           /* Allow growth */
+    
+    font-size: 14px;
+    line-height: 1.4;
+    color: #fff;
+    
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    justify-content: flex-start; /* Align to top */
+    padding: 20px;
+    
+    background: #151515;
+    border: 1px dashed #444;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+    /* Overflow Handling */
+    overflow-y: auto;       /* Scroll if too many abilities */
+    text-align: center;
+    gap: 15px;              /* Space between cards */
+}
+
+/* Custom Scrollbar */
+.results-box::-webkit-scrollbar {
+    width: 6px;
+}
+.results-box::-webkit-scrollbar-track {
+    background: #121212;
+    border-radius: 3px;
+}
+.results-box::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+}
+
+.results-box.has-results {
+    border-style: solid;
+    border-color: gold;
+}
+
+/* --- INNER ABILITY CARD (Fixes the overflow issue) --- */
+.ability-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;          /* Internal padding */
+    width: 100%;            /* Full width of parent */
+    box-sizing: border-box; /* Includes padding in width */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    
+    /* Crucial for containing text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;  /* Break long words if needed */
+}
+
+.ability-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.rarity-text {
+    font-size: 13px;
+    color: #ffd700; /* Gold */
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 12px;
+    color: #ccc;
+    line-height: 1.3;
+    display: block;
+    text-align: center;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 18px;
+    background: #333;
+    color: gold;
+    border: 2px solid gold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: Georgia, serif;
+}
+
+button:hover {
+    background: gold;
+    color: #121212;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+/* --- Rarity Item Styling (Compact) --- */
+.rarity {
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 4px;
+    background: #252525;
+    border-left: 3px solid #555; /* Left border for color indicator */
+    font-size: 0.85rem;
+}
+
+.rarity h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: gold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rarity p {
+    margin: 4px 0 0 0;
+    font-size: 0.8rem;
+    color: #ccc;
+    line-height: 1.2;
+}
+
+/* Percent styling */
+.percent {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: normal;
+}
+
+/* Colors per rarity */
+.common { border-left-color: gray; }
+.uncommon { border-left-color: green; }
+.rare { border-left-color: deepskyblue; }
+.epic { border-left-color: purple; }
+.legendary { border-left-color: orange; }
+.mythic { border-left-color: red; }
+
+/* Scrollbar styling for the sidebar */
+.rarity-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.rarity-sidebar::-webkit-scrollbar-track {
+    background: #121212;
+}
+.rarity-sidebar::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+}
+
+/* Mobile Responsiveness: Stack them on small screens */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    
+    .rarity-sidebar {
+        width: 100%;
+        max-height: none;
+    }
+}
