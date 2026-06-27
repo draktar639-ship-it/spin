@@ -1282,7 +1282,7 @@ function generateBehaviorAssessment() {
 
 
 document.getElementById("returnBtn").addEventListener("click", () => {
-    window.location.href = "Wheel.html";
+    window.location.href = "index.html";
 });
 
 document.getElementById("startBehaviorBtn")
