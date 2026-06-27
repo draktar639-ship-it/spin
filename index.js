@@ -1450,6 +1450,9 @@ document
         localStorage.getItem("characterAbilities")
         ) || [];
 
+    currentAlignment =
+    localStorage.getItem("characterAlignment") || "";
+
     const stats = characterStats;
 
     for (const attr in stats) {
@@ -1459,6 +1462,12 @@ document
         return "Incomplete character. Roll all 8 attributes first.";
     }
     }
+
+
+    console.log("Occupation:", currentOccupation);
+    console.log("Narrative:", currentNarrativeFunction);
+    console.log("Moral:", currentMoralRole);
+    console.log("Alignment:", currentAlignment);
 
     if (
     
@@ -1983,7 +1992,11 @@ switch (alignment) {
 document.getElementById("generateSummaryBtn")
 .addEventListener("click", () => {
 
-    const output = generateCharacterSummary();
+    currentAlignment =
+    localStorage.getItem("characterAlignment") || "";
+
+    const output =
+    generateCharacterSummary();
 
     document.getElementById(
         "characterSummary"
@@ -1995,9 +2008,7 @@ document.getElementById("generateSummaryBtn")
     ) {
         generatePowerScore();
     }
-
-}
-);
+});
 
 document.getElementById(
     "lockOriginBtn"
