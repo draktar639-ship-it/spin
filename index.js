@@ -1858,7 +1858,7 @@ switch (alignment) {
     function resetCharacter() {
 
     localStorage.removeItem("characterAlignment");
-    localStorage.removeItem("savedAbilities");
+    localStorage.removeItem("abilitiesText");
 
     if (!confirm("Reset entire character?")) return;
     
@@ -2110,9 +2110,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (savedAbilities.length > 0) {
         let abilitiesText = savedAbilities.join(" | ");
-        abilityEl.innerHTML = `
-            Ability: <b>${abilitiesText}</b>
-        `;
+        abilityEl.innerHTML = `Ability: <b>${abilitiesText}</b>`;
     } else {
         abilityEl.textContent = "Ability: None";
     }
