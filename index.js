@@ -1858,7 +1858,7 @@ switch (alignment) {
     function resetCharacter() {
 
     localStorage.removeItem("characterAlignment");
-    localStorage.removeItem("abilitiesText");
+    localStorage.removeItem("characterAbilities");
 
     if (!confirm("Reset entire character?")) return;
     
@@ -1941,10 +1941,18 @@ switch (alignment) {
         "Alignment: Not Evaluated";
 
     // Remove saved behavior assessment
-    // localStorage.removeItem("characterAlignment");
-    //currentAlignment = "";
-    //localStorage.removeItem("characterAbilities");
-    //currentAbilities = ""; //
+
+    localStorage.removeItem("characterAlignment");
+    currentAlignment = "";
+
+    localStorage.removeItem("characterAbilities");
+    currentAbilities = [];
+
+    const abilityEl = document.getElementById("characterAbility");
+
+    if (abilityEl) {
+        abilityEl.textContent = "Ability: None";
+    }
 
     // 🔥 RESET TABLE
     const resultCells = [
