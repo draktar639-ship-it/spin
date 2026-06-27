@@ -1858,7 +1858,7 @@ switch (alignment) {
     function resetCharacter() {
 
     localStorage.removeItem("characterAlignment");
-    localStorage.removeItem("characterAbility");
+    localStorage.removeItem("characterAbilities");
 
     if (!confirm("Reset entire character?")) return;
     
@@ -1944,8 +1944,8 @@ switch (alignment) {
     localStorage.removeItem("characterAlignment");
     currentAlignment = "";
 
-    localStorage.removeItem("characterAbility");
-    currentAbility = "";
+    localStorage.removeItem("characterAbilities");
+    currentAbilities = "";
 
     // 🔥 RESET TABLE
     const resultCells = [
