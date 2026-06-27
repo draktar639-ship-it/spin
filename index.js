@@ -1858,7 +1858,7 @@ switch (alignment) {
     function resetCharacter() {
 
     localStorage.removeItem("characterAlignment");
-    localStorage.removeItem("characterAbilities");
+    localStorage.removeItem("savedAbilities");
 
     if (!confirm("Reset entire character?")) return;
     
@@ -1941,11 +1941,10 @@ switch (alignment) {
         "Alignment: Not Evaluated";
 
     // Remove saved behavior assessment
-    localStorage.removeItem("characterAlignment");
-    currentAlignment = "";
-
-    localStorage.removeItem("characterAbilities");
-    currentAbilities = "";
+    // localStorage.removeItem("characterAlignment");
+    //currentAlignment = "";
+    //localStorage.removeItem("characterAbilities");
+    //currentAbilities = ""; //
 
     // 🔥 RESET TABLE
     const resultCells = [
