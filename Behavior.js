@@ -1281,9 +1281,4 @@ function generateBehaviorAssessment() {
 }
 
 
-document.getElementById("returnBtn").addEventListener("click", () => {
-    window.location.href = "index.html";
-});
-
-document.getElementById("startBehaviorBtn")
-    .addEventListener("click", startBehaviorAssessment);
+document.getElementById("startBehaviorBtn").addEventListener("click", startBehaviorAssessment);

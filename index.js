@@ -1858,7 +1858,7 @@ switch (alignment) {
     function resetCharacter() {
 
     localStorage.removeItem("characterAlignment");
-    localStorage.removeItem("characterAbility");
+    localStorage.removeItem("characterAbilities");
 
     if (!confirm("Reset entire character?")) return;
     
