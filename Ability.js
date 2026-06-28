@@ -347,7 +347,7 @@ function rollAbilityCount() {
 function generateAbilities() {
 
     if (abilityRerolls <= 0) {
-        alert("No rerolls remaining! (Maximum 10 rolls)");
+        alert("No rerolls remaining! (Maximum 20 rolls)");
         return;
     }
 
