@@ -24,7 +24,7 @@ const abilities = [
         "Illusion Casting",
         "Astral Projection",
 
-        // Elemental
+        // Elemental //Flight //Empathy //Possession //Animal Communication
 
         "Pyrokinesis",
         "Cryokinesis",
@@ -281,7 +281,7 @@ const abilityRarities = {
         );
 }
 
-let abilityRerolls = 20;
+let abilityRerolls = 30;
 
         function rollRarity() {
 
@@ -347,7 +347,7 @@ function rollAbilityCount() {
 function generateAbilities() {
 
     if (abilityRerolls <= 0) {
-        alert("No rerolls remaining! (Maximum 20 rolls)");
+        alert("No rerolls remaining! (Maximum 30 rolls)");
         return;
     }
 
