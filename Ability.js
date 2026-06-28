@@ -24,7 +24,7 @@ const abilities = [
         "Illusion Casting",
         "Astral Projection",
 
-        // Elemental //Flight //Empathy //Possession //Animal Communication"
+        // Elemental //Flight //Empathy //Possession // Animal Communication
 
         "Pyrokinesis",
         "Cryokinesis",
@@ -322,7 +322,6 @@ let abilityRerolls = 30;
 
 
 function rollAbilityCount() {
-// 70, 90, 98
 
     const roll =
         Math.random() * 100;
@@ -332,12 +331,12 @@ function rollAbilityCount() {
         return 0;
     }
 
-    if (roll < 20) {
+    if (roll < 90) {
 
         return 1;
     }
 
-    if (roll < 50) {
+    if (roll < 98) {
 
         return 2;
     }
