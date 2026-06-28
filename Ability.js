@@ -201,8 +201,10 @@ const abilityRarities = {
 
         "Enhanced Senses": "Common",
         "Animal Communication": "Common",
+        "Regeneration": "Common",
+        "Invulnerability": "common",
 
-        // UNCOMMON
+        // UNCOMMON "Invulnerability": "Uncommon",
 
         "Super Strength": "Uncommon",
         "Superspeed": "Uncommon",
@@ -215,8 +217,7 @@ const abilityRarities = {
         "Chlorokinesis": "Uncommon",
 
         // RARE
-
-        "Regeneration": "Rare",
+        // "Regeneration": "Common",
         "Shapeshifting": "Rare",
         "Intangibility": "Rare",
         "Precognition": "Rare",
