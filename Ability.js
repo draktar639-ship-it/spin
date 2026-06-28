@@ -24,7 +24,7 @@ const abilities = [
         "Illusion Casting",
         "Astral Projection",
 
-        // Elemental //Flight //Empathy //Possession //Animal Communication
+        // Elemental //Flight //Empathy //Possession //Animal Communication"
 
         "Pyrokinesis",
         "Cryokinesis",
@@ -201,10 +201,8 @@ const abilityRarities = {
 
         "Enhanced Senses": "Common",
         "Animal Communication": "Common",
-        "Regeneration": "Common",
-        "Invulnerability": "common",
 
-        // UNCOMMON "Invulnerability": "Uncommon",
+        // UNCOMMON
 
         "Super Strength": "Uncommon",
         "Superspeed": "Uncommon",
@@ -217,7 +215,8 @@ const abilityRarities = {
         "Chlorokinesis": "Uncommon",
 
         // RARE
-        // "Regeneration": "Common",
+
+        "Regeneration": "Rare",
         "Shapeshifting": "Rare",
         "Intangibility": "Rare",
         "Precognition": "Rare",
