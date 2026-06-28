@@ -281,7 +281,7 @@ const abilityRarities = {
         );
 }
 
-let abilityRerolls = 10;
+let abilityRerolls = 20;
 
         function rollRarity() {
 
