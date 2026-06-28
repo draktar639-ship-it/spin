@@ -1489,14 +1489,29 @@ document
 
         const value = stats[attr];
 
-        if (value === "SS" || value === "S" || value === "A+") {
+        if (
+            value === "SS" ||
+            value === "S" ||
+            value === "A+" ||
+            value === "A"
+        ) {
+
             strengths.push(attr);
+
         }
-        else if (value === "D" || value === "E" || value === "F") {
+        else if (
+            value === "D" ||
+            value === "E" ||
+            value === "F"
+        ) {
+
             weaknesses.push(attr);
+
         }
         else {
+
             average.push(attr);
+
         }
     }
 
